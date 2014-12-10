@@ -23,12 +23,12 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes'
+  s.source_files = 'Appcessorize/*.{h,m}'
+  s.resource_bundles = 'Assets/*.{png,nib}'
   s.resource_bundles = {
-    'Appcessorize' => ['Pod/Assets/*.png']
+    'Appcessorize' => ['Assets/*.{png,nib}']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'Appcessorize/*.h'
   # s.frameworks = 'UIKit', 'Foundation', 'Social', 'CoreFoundation', 'MessageUI', 'SystemConfiguration', 'MobileCoreServices', 'CoreLocation'
-  # s.dependency 
 end
