@@ -13,11 +13,11 @@ Pod::Spec.new do |s|
   s.summary          = "Appcessorize is a simple library that lets users make their photos into phone cases."
   s.description      = "Appcessorize is a simple library that lets users make their photos into phone cases. By integrating it in your application, your users will be able to get a real mobile case anywhere in the world. It is so easy: select images, add them to the case template, check out and **YOU ARE DONE!!**"
 
-  s.homepage         = "https://github.com/amani-mohammad/appcessorize-framework"
+  s.homepage         = "https://github.com/amani-mohammad/appcessorize"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Amani Mohammad" => "amani@nweave.com" }
-  s.source           = { :git => "https://github.com/amani-mohammad/appcessorize-framework.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/amani-mohammad/appcessorize.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
