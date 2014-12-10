@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectImagesViewController">
+            <connections>
+                <outlet property="infoButton" destination="O94-SV-QJt" id="TLe-Eg-5zz"/>
+                <outlet property="previewTemplate" destination="aB5-8v-BNW" id="Qje-Yx-eWm"/>
+                <outlet property="scrollView" destination="ojz-vh-U7u" id="l1Q-UG-PDz"/>
+                <outlet property="selectedDeviceImage" destination="G8I-f7-dfD" id="Enu-4P-H8e"/>
+                <outlet property="swipeView" destination="E0M-Ov-hJN" id="cPd-zM-d0s"/>
+                <outlet property="view" destination="iN0-l3-epB" id="aSe-jB-Avi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ojz-vh-U7u">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aB5-8v-BNW" userLabel="previewView">
+                            <rect key="frame" x="214" y="50" width="340" height="714"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G8I-f7-dfD">
+                                    <rect key="frame" x="0.0" y="0.0" width="340" height="714"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                </scrollView>
+                <view alpha="0.87000000476837158" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E0M-Ov-hJN" userLabel="swipeView" customClass="SwipeView">
+                    <rect key="frame" x="0.0" y="720" width="768" height="260"/>
+                    <color key="backgroundColor" red="0.094117647060000004" green="0.10980392160000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="260" id="nEZ-bb-SUe"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O94-SV-QJt">
+                    <rect key="frame" x="679" y="630" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="igR-M0-dec"/>
+                        <constraint firstAttribute="height" constant="50" id="s6Z-gO-Pzu"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="infoButtonClicked:" destination="-1" eventType="touchUpInside" id="h6y-N6-SKs"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ojz-vh-U7u" secondAttribute="trailing" id="BrP-Bo-yMN"/>
+                <constraint firstItem="ojz-vh-U7u" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DEg-CG-tQP"/>
+                <constraint firstAttribute="bottom" secondItem="E0M-Ov-hJN" secondAttribute="bottom" constant="44" id="T9o-Qf-ZbL"/>
+                <constraint firstAttribute="trailing" secondItem="O94-SV-QJt" secondAttribute="trailing" constant="39" id="Uyn-jm-SSa"/>
+                <constraint firstItem="ojz-vh-U7u" firstAttribute="leading" secondItem="E0M-Ov-hJN" secondAttribute="leading" id="Wuu-Fz-227"/>
+                <constraint firstItem="E0M-Ov-hJN" firstAttribute="trailing" secondItem="ojz-vh-U7u" secondAttribute="trailing" id="arm-7a-tAO"/>
+                <constraint firstAttribute="bottom" secondItem="O94-SV-QJt" secondAttribute="bottom" constant="344" id="s1R-Hj-mkj"/>
+                <constraint firstAttribute="bottom" secondItem="ojz-vh-U7u" secondAttribute="bottom" id="sZg-vh-1d3"/>
+                <constraint firstItem="E0M-Ov-hJN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xG8-al-EDO"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+            <point key="canvasLocation" x="140" y="154"/>
+        </view>
+    </objects>
+</document>

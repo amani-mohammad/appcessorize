@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ImageSwipeView">
+            <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vJb-Us-WHn" userLabel="Add image View">
+                    <rect key="frame" x="10" y="10" width="150" height="150"/>
+                    <subviews>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wSm-je-TXL" userLabel="AddImage">
+                            <rect key="frame" x="38" y="37" width="75" height="75"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="75" id="C4B-Y4-DcH"/>
+                                <constraint firstAttribute="height" constant="75" id="EZr-Ik-r5a"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="wSm-je-TXL" secondAttribute="centerX" constant="-0.5" id="CjC-Fb-e4f"/>
+                        <constraint firstItem="wSm-je-TXL" firstAttribute="centerY" secondItem="vJb-Us-WHn" secondAttribute="centerY" constant="-0.5" id="hCB-B5-OAm"/>
+                        <constraint firstItem="wSm-je-TXL" firstAttribute="centerX" secondItem="vJb-Us-WHn" secondAttribute="centerX" constant="0.5" id="mQj-fY-FxK"/>
+                        <constraint firstAttribute="centerY" secondItem="wSm-je-TXL" secondAttribute="centerY" constant="0.5" id="tor-Mt-HeW"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OG5-Xk-D6c">
+                    <rect key="frame" x="10" y="10" width="150" height="150"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekM-w9-ue8" userLabel="Delete Button">
+                    <rect key="frame" x="-6" y="-6" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="nbv-Bf-mji"/>
+                        <constraint firstAttribute="width" constant="40" id="uVL-DQ-peq"/>
+                    </constraints>
+                    <connections>
+                        <action selector="deleteImage:" destination="iN0-l3-epB" eventType="touchUpInside" id="huc-sB-f6T"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="ekM-w9-ue8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="-6" id="7WK-2d-fPa"/>
+                <constraint firstItem="vJb-Us-WHn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="9r8-Bi-5Ba"/>
+                <constraint firstAttribute="bottom" secondItem="vJb-Us-WHn" secondAttribute="bottom" constant="10" id="Jts-ff-Z7w"/>
+                <constraint firstItem="OG5-Xk-D6c" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="M9c-TT-QYo"/>
+                <constraint firstItem="OG5-Xk-D6c" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="TJm-5L-b9h"/>
+                <constraint firstItem="vJb-Us-WHn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Waw-G9-18i"/>
+                <constraint firstAttribute="trailing" secondItem="OG5-Xk-D6c" secondAttribute="trailing" constant="10" id="d1N-By-Ft4"/>
+                <constraint firstAttribute="bottom" secondItem="OG5-Xk-D6c" secondAttribute="bottom" constant="10" id="mi4-u6-1GG"/>
+                <constraint firstItem="ekM-w9-ue8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-6" id="sZi-4c-i3o"/>
+                <constraint firstAttribute="trailing" secondItem="vJb-Us-WHn" secondAttribute="trailing" constant="10" id="wks-TO-27c"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addImageIcon" destination="wSm-je-TXL" id="CsY-H9-jv6"/>
+                <outlet property="addImageView" destination="vJb-Us-WHn" id="hBQ-3d-tSo"/>
+                <outlet property="deleteButton" destination="ekM-w9-ue8" id="8Dh-nE-qZm"/>
+                <outlet property="imageView" destination="OG5-Xk-D6c" id="2r3-bD-X3f"/>
+            </connections>
+        </view>
+    </objects>
+</document>
